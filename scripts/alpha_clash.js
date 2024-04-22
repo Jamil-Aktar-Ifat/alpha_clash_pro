@@ -22,31 +22,43 @@ function handleKeyboardButtonPress(event) {
     console.log("You got a point!");
     console.log("You have pressed correctly", expectedAlphabet);
 
-    // score update
-    // 1. get the current score
-    const currentScoreElement = document.getElementById("current-score");
-    const currentScoreText = currentScoreElement.innerText;
-    const currentScore = parseInt(currentScoreText);
-    console.log(currentScore);
-    // 2. increase the score by 1
-    const newScore = currentScore + 1;
-    // 3. display the updated score
-    currentScoreElement.innerText = newScore;
+    const curentScore = getTextElementValueById("current-score");
+    const updatedScore = curentScore + 1;
+    console.log(updatedScore);
+    setTextElementValueById("current-score", updatedScore);
+
+    // -----------------------------------------
+    // // score update
+    // // 1. get the current score
+    // const currentScoreElement = document.getElementById("current-score");
+    // const currentScoreText = currentScoreElement.innerText;
+    // const currentScore = parseInt(currentScoreText);
+    // console.log(currentScore);
+    // // 2. increase the score by 1
+    // const newScore = currentScore + 1;
+    // // 3. display the updated score
+    // currentScoreElement.innerText = newScore;
+
     // start a new round
     removeBackgroundColorById(expectedAlphabet);
     continueGame();
   } else {
     console.log("You missed a life!");
 
-    // life update
-    // 1. get the current life
-    const currentLifeElement = document.getElementById("current-life");
-    const currentLifeText = currentLifeElement.innerText;
-    const currentLife = parseInt(currentLifeText);
-    // 2. decrease the life count
-    const newLife = currentLife - 1;
-    // 3. display the updated life
-    currentLifeElement.innerText = newLife;
+    const currentLife = getTextElementValueById("current-life");
+    const updatedLife = currentLife - 1;
+    setTextElementValueById("current-life", updatedLife);
+
+    // ------------------------------------------------
+    // // life update
+    // // 1. get the current life
+    // const currentLifeElement = document.getElementById("current-life");
+    // const currentLifeText = currentLifeElement.innerText;
+    // const currentLife = parseInt(currentLifeText);
+    // // 2. decrease the life count
+    // const newLife = currentLife - 1;
+    // // 3. display the updated life
+    // currentLifeElement.innerText = newLife;
   }
 }
 
