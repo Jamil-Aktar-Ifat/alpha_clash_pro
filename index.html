@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alpha Clash Pro</title>
+    <title>Alpha Clash Pro Max</title>
     <!-- Daisy UI and Tailwind -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css"
@@ -15,6 +15,10 @@
 
     <!-- custom css  -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/6fd2934a6d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <main
@@ -23,11 +27,13 @@
       <!-- Home Screen  -->
       <section
         id="home-screen"
-        class="min-h-screen text-white flex justify-center items-center"
+        class="min-h-screen text-white flex align-middle justify-center items-center"
       >
         <div class="flex flex-col items-center gap-6">
           <h1 class="text-8xl font-anton uppercase">Alpha Clash Pro</h1>
-          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <p>
+            Unleash Your Keyboard Typing Speed: Hit the “Play” Button to Play
+          </p>
           <button onclick="play()" class="btn bg-white text-black">
             Play Now
           </button>
@@ -109,7 +115,7 @@
       <!-- Final Score Start  -->
       <section
         id="final-score"
-        class="score flex justify-center items-center min-h-screen hidden"
+        class="score flex flex-col justify-center items-center min-h-screen hidden"
       >
         <div
           class="text-white text-center space-y-5 bg-[#FFFFFF33] p-4 rounded-lg"
@@ -120,9 +126,17 @@
             <span id="game-score">0</span>
           </h1>
           <button onclick="play()" class="btn">Play Again</button>
-          <p class="text-white">Practice will make you Pro</p>
+          <p class="text-white">
+            Don't Give Up! <br />
+            Practice will make you Pro
+            <i class="fa-regular fa-face-grin-wide"></i>
+          </p>
         </div>
       </section>
+      <p class="font-mono text-white text-center">
+        Made with <i class="fa-solid fa-heart-circle-bolt"></i> by Jamil for
+        your typing sucess!
+      </p>
     </main>
     <script src="./scripts/utility.js"></script>
     <script src="./scripts/alpha_clash.js"></script>

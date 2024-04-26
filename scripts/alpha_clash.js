@@ -92,6 +92,7 @@ function play() {
   // hide everything except the playground
   hideElementById("home-screen");
   hideElementById("final-score");
+
   showElementById("play-ground");
 
   // reset score and life
